@@ -1,0 +1,12 @@
+{% block body %}
+<form action="" method="post">
+{% csrf_token %}
+{{form.non_field_errors}}
+{% for data in form %}
+<p>{{data.label_tag}}{{data}}{{data.errors}}</p>
+
+{% endfor %}
+<button type="submit">Change</button>
+</form>
+<h3>{{ss}}</h3>
+{% endblock body %}

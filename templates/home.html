@@ -1,0 +1,46 @@
+{% include 'base.html' %}
+{% load static %}
+{% block title %}
+<title>home</title> 
+{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock css %}
+
+{% block body %}
+<div class="container">
+<div class="msg">
+{% if messages %}
+{% for msg in messages %}
+<h3>{{msg}}</h3>{% endfor %}
+{% endif %}
+</div>
+<div class="buttons">
+<button type="button" class="button"> <a href="{% url 'circle' %}">Circles on canvas</a></button>
+{% if user.is_authenticated %}
+<button type="button" class="button" id ="logout"> <a href="{% url 'logout' %}">Logout</a></button>
+<button type="button" class="button" id ="edit"> <a href="{% url 'newpass' %}">Edit password</a></button>
+</div>
+{% else %}
+<button type="button" class="button" id ="login"> <a href="{% url 'login' %}">Login</a></button>
+<button type="button" class="button" id ="signup"><a href="{% url 'signup' %}">Signup</a></button>
+</div>
+{% endif %}
+</div>
+{% if user.is_authenticated %}
+<div class="info">File should be with '.csv' extension!</div>
+<div class="file">
+<form action="" method='post' enctype="multipart/form-data" novalidate>
+{% csrf_token %}
+{{form.as_p}}
+<button type='submit' class="button" id='sub'>submit</button>
+</form>
+{% else %}
+<div class="fl">
+<h1>If you want to upload ".csv" file,<br> you have to first Login or Signup. </h1>
+</div>
+{% endif %}
+</div>
+
+{% endblock body %}

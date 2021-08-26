@@ -1,0 +1,18 @@
+{% include 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock css %}
+
+{% block body %}
+<h2>sign up page</h2>
+{% if messages %}
+{% for msg in messages %}
+<h3>{{msg}}</h3>{% endfor %}
+{% endif %}
+<form action="" method='post' novalidate>
+{% csrf_token %}
+{{form.as_p}}
+<button type='submit'>submit</button>
+</form>
+
+{% endblock body %}

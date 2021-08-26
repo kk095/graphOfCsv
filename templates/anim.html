@@ -1,0 +1,27 @@
+{% include 'base.html' %}
+{% load static %}
+{% block css %}
+
+{% endblock css %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/circle.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block title %}
+<title>Animation</title>
+{% endblock title %}
+
+{% block body %}
+<div class="btn-group lst" role="group" aria-label="Basic mixed styles example">
+  <button type="button" class="btn btn-danger" value='#f00' onclick="chng(this.value)">Red</button>
+  <button type="button" class="btn btn-info" value='#500B94' onclick="chng(this.value)">Voilet</button>
+  <button type="button" class="btn btn-success" value='#0f0' onclick="chng(this.value)">Green</button>
+  <button type="button" class="btn btn-primary" value='#0D6EFD' onclick="chng(this.value)" >Sky-blue</button>
+  <button type="button" class="btn btn-dark" value='#000' onclick="chng(this.value)" >Black</button>
+</div>
+    <canvas id="canvas"></canvas>
+{% endblock body %}
+
+{% block js %}  
+<script src="{% static 'js/circle.js' %}"></script>
+
+{% endblock js %}
