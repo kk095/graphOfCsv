@@ -12,13 +12,15 @@
 
 {% block body %}
 <div class="btn-group lst" role="group" aria-label="Basic mixed styles example">
-  <button type="button" class="btn btn-danger" value='#f00' onclick="chng(this.value)">Red</button>
-  <button type="button" class="btn btn-info" value='#500B94' onclick="chng(this.value)">Voilet</button>
-  <button type="button" class="btn btn-success" value='#0f0' onclick="chng(this.value)">Green</button>
-  <button type="button" class="btn btn-primary" value='#0D6EFD' onclick="chng(this.value)" >Sky-blue</button>
-  <button type="button" class="btn btn-dark" value='#000' onclick="chng(this.value)" >Black</button>
+  <button type="button" class="btn btn-danger btn-sm" value='#f00' onclick="chng(this.value)">Red</button>
+  <button type="button" class="btn btn-info btn-sm" value='#500B94' onclick="chng(this.value)">Voilet</button>
+  <button type="button" class="btn btn-success btn-sm" value='#0f0' onclick="chng(this.value)">Green</button>
+  <button type="button" class="btn btn-primary btn-sm" value='#0D6EFD' onclick="chng(this.value)" >Sky-blue</button>
+  <button type="button" class="btn btn-dark btn-sm" value='#000' onclick="chng(this.value)" >Black</button>
 </div>
+<div class="container text-center">
     <canvas id="canvas"></canvas>
+</div>
 {% endblock body %}
 
 {% block js %}  

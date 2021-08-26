@@ -5,8 +5,8 @@ var color="#f00"
 
 
 // Set Canvas dimensions
-canvas4.width   = 500;
-canvas4.height  = 500;
+canvas4.width   = 300;
+canvas4.height  = 300;
 
 // Get drawing context
 var c4 = canvas4.getContext( '2d' );
@@ -37,12 +37,12 @@ function Circle( x, y, dx, dy, radius ) {
 
   this.update = function() {
 
-    if( this.x + this.radius > 500 || this.x - this.radius < 0 ) {
+    if( this.x + this.radius > 300 || this.x - this.radius < 0 ) {
 
       this.dx = -this.dx;
     }
 
-    if( this.y + this.radius > 500 || this.y - this.radius < 0 ) {
+    if( this.y + this.radius > 300 || this.y - this.radius < 0 ) {
 
       this.dy = -this.dy;
     }
@@ -57,13 +57,13 @@ function Circle( x, y, dx, dy, radius ) {
 var circles = [];
 
 // Radius
-var radius = 50;
+var radius = 20;
 
 for( var i = 0; i < 5; i++ )  {
   
   // Starting Position
-  var x = Math.random() * ( 500 - radius * 2 ) + radius;
-  var y = Math.random() * ( 500 - radius * 2) + radius;
+  var x = Math.random() * ( 300 - radius * 2 ) + radius;
+  var y = Math.random() * ( 300 - radius * 2) + radius;
 
   // Speed in x and y direction
     var dx = ( Math.random() - 0.5 ) * 2;
@@ -76,7 +76,7 @@ function animate4() {
   
   requestAnimationFrame( animate4 );
 
-  c4.clearRect( 0, 0, 500, 500 );
+  c4.clearRect( 0, 0, 300, 300 );
 
   for( var r = 0; r < 5; r++ ) {
 

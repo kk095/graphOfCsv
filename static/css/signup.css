@@ -1,0 +1,25 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFC107;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+input{
+    background: transparent;
+}
+h2{
+    color: #61428F;
+}
+.errorlist{
+    color: #fc0505;
+    text-decoration: none;
+    list-style-type:none
+}
