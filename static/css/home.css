@@ -24,21 +24,18 @@ a:hover{
 
 .buttons{
     width: auto;
-    display: flex;
-    justify-content: space-between;
     position: absolute;
     top:20px;
-    right: 10vh;
+    right: 10px;
 }
 
 .button{
-    padding: 8px 15px;
+    padding: 5px 10px;
     background-color: #61428F;
     color: white;
     outline: none;
     border: none;
     border-radius: 3px;
-    margin: 0 10px;
     
 }
 
@@ -65,14 +62,19 @@ a:hover{
     width: auto;
     height: auto;
     padding: 20px 30px;
-    color: #FC2512;
+    color: #61428F;
     text-shadow: 1px 1px black;
     font-weight: 900;
+    text-align: center;
 }
 .info{
     color: #46237a;
     font-weight: 900;
     position: absolute;
-    top:15vh;
-    font-size: 30px;
+    top:25vh;
+    font-size: 4vw;
+    text-align: center;
+}
+.file{
+    text-align: center;
 }

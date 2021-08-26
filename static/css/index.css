@@ -27,3 +27,7 @@ body{
     width: 30vw;
     margin-top: 10px;
 }
+
+.myChart{
+    width: 100%;
+}

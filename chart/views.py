@@ -82,8 +82,9 @@ class Signup(SuccessMessageMixin,CreateView):
     form_class = Mysignup
     success_message = "Your profile was created successfully"
 
-class Logout(LogoutView):
+class Logout(SuccessMessageMixin,LogoutView):
     template_name='home.html'
+    success_message="You have Logout from your account!"
     next_page =  reverse_lazy('home')
 
 class Login(SuccessMessageMixin, LoginView):

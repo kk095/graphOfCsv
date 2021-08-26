@@ -6,28 +6,27 @@
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">  
-    <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
 {% endblock css %}
 
 {% block body %}
     <div class="container-flex bg-warning bd">
-    {% if messages %}
+  {% if messages %}
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  
   {% if msg.tags == warning %}
-{% for msg in messages %}
-<strong>{{msg.tags}}!</strong> {{msg}}{% endfor %}
-{% else %}
-{% for msg in messages %}
-<strong>{{msg.tags}}!</strong> {{msg}}{% endfor %}
-
+    {% for msg in messages %}
+      <strong>{{msg.tags}}!</strong> {{msg}}
+    {% endfor %}
+  {% else %}
+    {% for msg in messages %}
+    <strong>{{msg.tags}}!</strong> {{msg}}
+    {% endfor %}
   {% endif %}
- 
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
   {% endif %}
-    <div class="card col-md-6 " style="width: 50rem;">
+    <div class="container bg-light">
   <div class="card-body">
     <canvas id="myChart"></canvas>
   </div>
